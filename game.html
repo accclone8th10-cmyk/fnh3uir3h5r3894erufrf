@@ -1,40 +1,57 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8">
-  <title>Huyền Vũ Tu Tiên - Càn Khôn Đồ</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Huyền Vũ Tu Tiên - Toàn Tập</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div id="ui-layer">
-    <div id="side-panel" class="glass-panel">
-      <div class="panel-header">TRẠNG THÁI TU VI</div>
-      
-      <div class="menu-tabs">
-        <button id="tab-be-quan" class="active" onclick="switchMode('BE_QUAN')">BẾ QUAN</button>
-        <button id="tab-hanh-tau" onclick="switchMode('HANH_TAU')">HÀNH TẨU</button>
-      </div>
+    <div id="ui-layer">
+        <div id="side-panel" class="glass-panel">
+            <div class="panel-header">CÀN KHÔN BẢNG</div>
+            
+            <div class="menu-tabs">
+                <button id="tab-be-quan" class="active" onclick="switchMode('BE_QUAN')">BẾ QUAN</button>
+                <button id="tab-hanh-tau" onclick="switchMode('HANH_TAU')">HÀNH TẨU</button>
+            </div>
 
-      <div class="stat-group">
-        <p>Cảnh giới: <span id="display-realm" class="gold-text">Luyện Khí</span></p>
-        <div class="bar-label">Linh khí tích lũy:</div>
-        <div class="bar-bg"><div id="progress-bar" class="bar-fill spirit"></div></div>
-        
-        <p style="margin-top: 15px;">Trạng thái: <span id="display-state">Đang tọa thiền</span></p>
-        <div class="bar-label">Sinh mệnh (HP):</div>
-        <div class="bar-bg"><div id="hp-bar" class="bar-fill hp"></div></div>
-        
-        <div id="speed-tag" class="speed-text">Tốc độ nạp: +0/s</div>
-      </div>
+            <div class="stat-container">
+                <div class="stat-row">
+                    <span>Cảnh giới:</span>
+                    <span id="display-realm" class="gold-text">Luyện Khí</span>
+                </div>
+                
+                <div class="bar-section">
+                    <div class="bar-label">Linh Khí (Tiến độ)</div>
+                    <div class="bar-bg"><div id="progress-bar" class="bar-fill spirit"></div></div>
+                </div>
 
-      <div class="panel-footer">
-        <p>• WASD: Di chuyển</p>
-        <p>• Chuột trái: Xuất chiêu (Vệt sáng)</p>
-        <p>• Space: Đột phá (Khi đầy Linh khí)</p>
-      </div>
+                <div class="stat-row" style="margin-top: 15px;">
+                    <span>Trạng thái:</span>
+                    <span id="display-state" style="color: #00f2fe;">Đang tọa thiền</span>
+                </div>
+
+                <div class="bar-section">
+                    <div class="bar-label">Sinh mệnh (HP)</div>
+                    <div class="bar-bg"><div id="hp-bar" class="bar-fill hp"></div></div>
+                </div>
+
+                <div id="speed-tag" class="speed-indicator">+0/s</div>
+            </div>
+
+            <div class="instruction">
+                <p><b>Điều khiển:</b></p>
+                <ul>
+                    <li>WASD: Di chuyển</li>
+                    <li>Chuột trái: Phóng vệt sáng</li>
+                    <li>Space: Đột phá cảnh giới</li>
+                </ul>
+            </div>
+        </div>
     </div>
-  </div>
-  <canvas id="game"></canvas>
-  <script src="main.js"></script>
+
+    <canvas id="game"></canvas>
+    <script src="main.js"></script>
 </body>
 </html>
