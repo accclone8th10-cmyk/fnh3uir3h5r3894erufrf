@@ -171,3 +171,4 @@ window.addEventListener("resize", () => {
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 requestAnimationFrame(loop);
+window.addEventListener('mousedown', () => { window.focus(); });
